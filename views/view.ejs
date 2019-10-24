@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>공학설계 3조</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <!-- MiniColors -->
+    <script src="jquery.minicolors.js"></script>
+    <link rel="stylesheet" href="jquery.minicolors.css">
+    <script>
+      $(document).ready(function () {
+        $('button').click(function () {
+          $.get('/controller/' + $(this).attr('id'), function (data, status) {
+          });
+        });
+      });
+      function cp() {
+        $('.colorPicker').colorpicker({
+          format: "hex"
+        });
+      }
+    </script>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+            border: none;
+        }
+        #A{
+            background-color: white;
+            color: grey;
+            border: none;
+        }
+        #A:hover{
+            background-color: black;
+        }
+        button[name="green"]{
+            background-color: green;
+            border: none;
+
+        }
+        button[name="green"]:hover{
+            background-color: black;
+
+        }
+        button[name="red"]{
+            background-color: red;
+            border: none;
+        }
+        button[name="red"]:hover{
+            background-color: black;
+        }
+        button[name="blue"]{
+            background-color: blue;
+            border: none;
+        }
+        button[name="blue"]:hover{
+            background-color: black;
+        }
+        #X{
+            background-color: grey;
+            color: white;
+            border: none;
+        }
+        #X:hover{
+            background-color: black;
+        }
+        /*body {*/
+            /*width: 100vw;*/
+            /*padding: 0 auto;*/
+            /*background-color: #222;*/
+            /*position: relative;*/
+        /*}*/
+        /*.wrap {*/
+            /*color: white;*/
+            /*position: absolute;*/
+            /*!*background-color: skyblue;*!*/
+            /*width: 60%;*/
+            /*left: 50%;*/
+            /*transform: translate(-50%, 0);*/
+            /*height: 100vh;*/
+        /*}*/
+
+        /*header {*/
+            /*text-align: center;*/
+            /*padding: 10px 0;*/
+        /*}*/
+
+        /*main {*/
+
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h2>공학설계 3조</h2>
+    </header>
+    <main>
+        <h3>LED 제어 버튼</h3>
+        <div>
+            <button type="button" class="btn btn-success" id='A'>모두 켜기</button>
+            <button name="green" type="button" class="btn btn-warning" id='1'>초록색</button>
+            <button name="red" type="button" class="btn btn-primary" id='2'>빨간색</button>
+            <button name="blue" type="button" class="btn btn-success" id='3'>파랑색</button>
+            <button type="button" class="btn btn-default" id='X'>모두 끄기</button>
+        </div>
+    </main>
+</div>
+</body>
+</html>
