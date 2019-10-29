@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery.min.js"></script>
-    <!-- MiniColors -->
-    <script src="jquery.minicolors.js"></script>
-    <link rel="stylesheet" href="jquery.minicolors.css">
+
+    <!--jquery UI frameworks-->
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+    <!--color picker jquery-->
+    <link href="css/evol.colorpicker.min.css" rel="stylesheet">
+    <script src="js/evol.colorpicker.min.js"></script>
+
     <script>
       $(document).ready(function () {
         $('button').click(function () {
@@ -19,76 +24,82 @@
           });
         });
       });
-      function cp() {
-        $('.colorPicker').colorpicker({
-          format: "hex"
-        });
-      }
     </script>
     <style>
-        body{
+        body {
             background-color: black;
-            color:white;
+            color: white;
             border: none;
         }
-        #A{
+
+        #A {
             background-color: white;
             color: grey;
             border: none;
         }
-        #A:hover{
+
+        #A:hover {
             background-color: black;
         }
-        button[name="green"]{
+
+        button[name="green"] {
             background-color: green;
             border: none;
 
         }
-        button[name="green"]:hover{
+
+        button[name="green"]:hover {
             background-color: black;
 
         }
-        button[name="red"]{
+
+        button[name="red"] {
             background-color: red;
             border: none;
         }
-        button[name="red"]:hover{
+
+        button[name="red"]:hover {
             background-color: black;
         }
-        button[name="blue"]{
+
+        button[name="blue"] {
             background-color: blue;
             border: none;
         }
-        button[name="blue"]:hover{
+
+        button[name="blue"]:hover {
             background-color: black;
         }
-        #X{
+
+        #X {
             background-color: grey;
             color: white;
             border: none;
         }
-        #X:hover{
+
+        #X:hover {
             background-color: black;
         }
+
         /*body {*/
-            /*width: 100vw;*/
-            /*padding: 0 auto;*/
-            /*background-color: #222;*/
-            /*position: relative;*/
+        /*width: 100vw;*/
+        /*padding: 0 auto;*/
+        /*background-color: #222;*/
+        /*position: relative;*/
         /*}*/
         /*.wrap {*/
-            /*color: white;*/
-            /*position: absolute;*/
-            /*!*background-color: skyblue;*!*/
-            /*width: 60%;*/
-            /*left: 50%;*/
-            /*transform: translate(-50%, 0);*/
-            /*height: 100vh;*/
+        /*color: white;*/
+        /*position: absolute;*/
+        /*!*background-color: skyblue;*!*/
+        /*width: 60%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, 0);*/
+        /*height: 100vh;*/
         /*}*/
 
         /*header {*/
-            /*text-align: center;*/
-            /*padding: 10px 0;*/
+        /*text-align: center;*/
+        /*padding: 10px 0;*/
         /*}*/
 
         /*main {*/
