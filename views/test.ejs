@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TEST</title>
+</head>
+<body>
+<div style="height: 100px; width: 100px; border: 1px solid black; margin-top: 100px">
+    <input id="color" type="color">
+</div>
+<script>
+    let theInput = document.getElementById("color");
+    let theColor = theInput.value;
+    console.log('theInput', theInput)
+    console.log('theColor', theColor)
+    theInput.addEventListener("input", function (a) {
+        console.log(a.target.value)
+    })
+</script>
+</body>
+
+</html>
