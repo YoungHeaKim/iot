@@ -4,16 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>공학설계 3조</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <style>
         body {
-            background-color: black;
+            background-color: #414a4c;
             color: white;
             border: none;
             text-align: center;
+        }
+
+        .wrap {
+            background-color: navy;
+            width: 80vw;
+            height: 100vh;
+            margin: 0;
+            display: inline-block;
+        }
+
+        h2 {
+            margin: 10px 0 20px;
         }
 
         #colorInputBox {
@@ -41,50 +53,114 @@
             display: inline-block;
         }
 
-        /*#A {background-color: white; color: grey;border: none;}*/
-        /*#A:hover {background-color: black;}*/
-        /*button[name="green"] {background-color: green;border: none;}*/
-        /*button[name="green"]:hover {background-color: black;}*/
-        /*button[name="red"] {background-color: red;border: none;}*/
-        /*button[name="red"]:hover {background-color: black;}*/
-        /*button[name="blue"] {background-color: blue;border: none;}*/
-        /*button[name="blue"]:hover {background-color: black;}*/
-        /*#X {background-color: grey;color: white;border: none;}*/
-        /*#X:hover {background-color: black;}*/
+        .buttonBox {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            border-top: 1px solid white;
+        }
+
+        #buttonToggle {
+            color: black;
+            display: inline-block;
+            width: 100px;
+        }
+
+        #tempDiv {
+            /*display: none;*/
+            border-top: 1px solid white;
+            margin-top: 30px;
+        }
+
+        #X {
+            background-color: grey;
+            color: white;
+            border: none;
+        }
+
+        #X:hover {
+            background-color: black;
+        }
+
+        #submit {
+            color: black;
+        }
+
+        #startTemp {
+            color: black;
+        }
+
+        .classNumber {
+            width: 100%;
+            text-align: right;
+            margin-bottom: 5px;
+        }
     </style>
     <script>
         $(document).ready(function () {
-            $('#submit').click(function () {
-                const value = $(this).val().substring(1);
-                console.log('value', value)
-
-                $.get('/controller/' + value, function (data, status) {
-                });
+            $("button").click(function () {
+                if (this.id === 'submit') {
+                    const value = $(this).val().substring(1);
+                    console.log(value)
+                    return $.get('/controller/' + value, function (data, status) {
+                    });
+                } else if (this.id === 'X') {
+                    return $.get('/controller/' + $(this).attr('id'), function (data, status) {
+                    });
+                } else return
             });
         });
+
+        let timer = null;
+
+        function temp() {
+            let text = document.getElementById("startTemp").innerText;
+            if (text === "온도 제어 시작" && !timer) {
+                timer = setInterval(function () {
+                    return $.get('/controller/temp', function (data, status) {
+                    });
+                }, 5000);
+
+                document.getElementById("startTemp").innerHTML = "멈춤"
+            } else {
+                clearInterval(timer);
+                timer = null;
+                document.getElementById("startTemp").innerHTML = "온도 제어 시작"
+            }
+        }
     </script>
 </head>
 <body>
 <div class="wrap">
     <header>
         <h2>공학설계 3조</h2>
+        <div class="classNumber">
+            201312198 김용해
+        </div>
+        <div class="classNumber">
+            201312252 장동권
+        </div>
+        <div class="classNumber">
+            201312221 박범진
+        </div>
     </header>
     <main>
-        <h3>LED 제어 버튼</h3>
-        <!--        <div>-->
-        <!--            <button type="button" class="btn btn-success" id='A'>모두 켜기</button>-->
-        <!--            <button name="green" type="button" class="btn btn-warning" id='1'>초록색</button>-->
-        <!--            <button name="red" type="button" class="btn btn-primary" id='2'>빨간색</button>-->
-        <!--            <button name="blue" type="button" class="btn btn-success" id='3'>파랑색</button>-->
-        <!--            <button type="button" class="btn btn-default" id='X'>모두 끄기</button>-->
-        <!--        </div>-->
-        <div id="colorInputBox">
-            <input id="colorInput" type="color" value="#000000">
+        <div class="buttonBox"/>
+        <div id="ledDiv">
+            <h3>LED 제어</h3>
+            <div id="colorInputBox">
+                <input id="colorInput" type="color" value="#000000">
+            </div>
+            <div>
+                <p id="choosen_color"></p>
+            </div>
+            <button type="button" class="btn btn-default" id='X'>모두 끄기</button>
+            <button id="submit" value="#000000" class="btn">등록</button>
         </div>
-        <div>
-            <p id="choosen_color"></p>
+        <div id="tempDiv">
+            <h3>온도 센서</h3>
+            <button id="startTemp" onclick="temp()" class="btn">온도 제어 시작</button>
         </div>
-        <button id="submit" value="#000000" style="color:#000;">등록</button>
     </main>
     <script>
         const default_color = document.getElementById("colorInput").value;

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbdf8036-ae41-4cb0-87a9-474602894217" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/test.ejs" afterDir="false" />
+    <list default="true" id="dbdf8036-ae41-4cb0-87a9-474602894217" name="Default Changelist" comment="v">
+      <change afterPath="$PROJECT_DIR$/index1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iot_1/iot_1.ino" beforeDir="false" afterPath="$PROJECT_DIR$/iot_1/iot_1.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/esm/.data.blob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/esm/.data.blob" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/esm/.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/esm/.data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@serialport/parser-readline/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@serialport/parser-readline/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@serialport/parser-readline/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@serialport/parser-readline/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@serialport/parser-readline/readline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/test.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/test.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/view.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/view.ejs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,15 +22,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ejs`</find>
-      <find>controller</find>
-      <find>var</find>
-      <find>container</find>
-      <find>path</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -29,6 +29,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,16 +42,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/server" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/iot_01" />
       <recent name="$PROJECT_DIR$/src/common" />
       <recent name="$PROJECT_DIR$/src/controllers" />
       <recent name="$PROJECT_DIR$/src/models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -85,6 +86,13 @@
       <workItem from="1571933866619" duration="5292000" />
       <workItem from="1573005397488" duration="18630000" />
       <workItem from="1573384002341" duration="7383000" />
+      <workItem from="1573607306418" duration="385000" />
+      <workItem from="1573607706572" duration="12062000" />
+      <workItem from="1573723590230" duration="9360000" />
+      <workItem from="1574220767040" duration="74000" />
+      <workItem from="1574221060795" duration="16000" />
+      <workItem from="1574227648741" duration="2440000" />
+      <workItem from="1574817572318" duration="30440000" />
     </task>
     <servers />
   </component>
